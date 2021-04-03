@@ -28,6 +28,10 @@ router.get('/:id', async (req, res) => {
         as: 'product_with_tag',
       }]
     });
+    if (!tagGetID) {
+      res.status(404).json({ message: `There's no tag with that ID! :( ` });
+      return;
+    }
     res.status(200).json(tagGetID);
   } 
   catch (err) {
@@ -36,8 +40,22 @@ router.get('/:id', async (req, res) => {
 });
 
 // delete a tag by ID
-router.delete('/:id', (req, res) => {
-  // delete on tag by its `id` value
+router.delete('/:id', async (req, res) => {
+  try {
+    const tagDelete = await Tag.destroy({
+      where: {
+        id: req.params.id,
+      },
+    });
+    if (!tagDelete) {
+      res.status(404).json({ message: `There's no tag with that ID! :( ` });
+      return;
+    }
+    res.status(200).json(tagDelete);
+  } 
+  catch (err) {
+    res.status(500).json(err);
+  }
 });
 
 // update a tag by ID
