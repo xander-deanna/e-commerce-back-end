@@ -3,6 +3,7 @@ const categoryRoutes = require('./category-routes');
 const productRoutes = require('./product-routes');
 const tagRoutes = require('./tag-routes');
 
+// connecting individual routes by table
 router.use('/categories', categoryRoutes);
 router.use('/products', productRoutes);
 router.use('/tags', tagRoutes);
