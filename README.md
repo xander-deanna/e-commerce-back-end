@@ -24,6 +24,7 @@ This application is dependent on the npm packages Express and Sequelize.
 * After you're sure node.js has been installed correctly, clone the [E-Commerce Back End Repo](https://github.com/xander-deanna/e-commerce-back-end) locally onto your computer. Instructions on how to clone from Github can be found on [Github Docs](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository).
 * Once the repo has been cloned, please navigate to the correct directory using your terminal or other command line application. 
 * Next type <code>npm i</code> into the command line and hit <kbd>enter</kbd> to install all dependencies.
+* You will also need to fill out the .envEXAMPLE file with your information, and re-save the file as .env.
 <br>
 <br>
 
