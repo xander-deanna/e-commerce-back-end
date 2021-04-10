@@ -18,7 +18,7 @@ router.get('/', async (req, res) => {
   }
 });
 
-// display by category by ID
+// display category by ID
 router.get('/:id', async (req, res) => {
   try {
     const categoryGetID = await Category.findByPk(req.params.id, {
